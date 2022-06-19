@@ -20,6 +20,7 @@ body {
 a {
 	text-decoration: none;
 }
+
 .container {
 	width: 1352px;
 	margin: 0 auto;
@@ -27,7 +28,7 @@ a {
 /* header */
 .header {
 	height: 70px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 }
 .header_container {
 	display: flex;
@@ -37,7 +38,7 @@ a {
 }
 .logo {
 	font-family: var(--font-raleway);
-	font-size: 32px;
+	font-size: 2rem;
 	font-weight: 300;
 	color: var(--color-primary);
 }
@@ -47,8 +48,8 @@ a {
 .nav_link {
 	color: var(--color-grey);
 	font-weight: 700;
-	font-size: 11px;
-	letter-spacing: 3.28px;
+	font-size: 0.6875rem;
+	letter-spacing: 0.1875rem;
 	padding: 28px 18px 22px;
 	text-transform: uppercase;
 	border-bottom: 4px soild transparent;
@@ -101,23 +102,30 @@ a {
 .btn--large {
     padding: 22px 155px;
 }
+.btn--redish {
+    background-color:  var(--color-redish);
+}
+.btn--green {
+    background-color: var(--color-green);
+}
 /* statistics */
 
 .statistics {
     margin-top: 100px;
-}
-.statistics_container {
+  }
+  
+  .statistics__title {
+    text-align: center;
+  }
+  
+  .statistics__container {
     max-width: 800px;
     margin: 100px auto 120px;
     display: flex;
     justify-content: space-between;
-}
-h2 {
-    font-family: var(--font-raleway);
-    font-size: 2.25rem;
-    text-align: center;
-}
-.statistics_single {
+  }
+  
+  .statistics__single {
     max-width: 160px;
     display: flex;
     flex-direction: column;
@@ -125,55 +133,70 @@ h2 {
     align-items: center;
     text-align: center;
     font-family: var(--font-raleway);
-}
-.statistics_circle {
-    position: relative;
+  }
+  
+  .statistics__circle {
     border-radius: 50%;
     width: 63px;
     height: 63px;
-}
-.statistics_img {
+    position: relative;
+  }
+  
+  .statistics__img {
     position: absolute;
-}
-.statistics_single:nth-child(1) .statistics_circle {
+  }
+  
+  .statistics__single:nth-child(1) .statistics__circle {
     background-color: var(--color-redish);
-}
-.statistics_single:nth-child(1) .statistics_img {
+  }
+  
+  .statistics__single:nth-child(1) .statistics__img {
     top: 0;
     left: 45%;
-}
-.statistics_single:nth-child(2) .statistics_circle {
+  }
+  
+  .statistics__single:nth-child(2) .statistics__circle {
     background-color: var(--color-primary);
-}
-.statistics_single:nth-child(2) .statistics_img {
+  }
+  
+  .statistics__single:nth-child(2) .statistics__img {
     top: 14px;
     left: 47%;
-}
-.statistics_single:nth-child(3) .statistics_img {
+  }
+  
+  .statistics__single:nth-child(3) .statistics__circle {
     background-color: var(--color-green);
-}
-.statistics_single:nth-child(3) .statistics_img {
+  }
+  
+  .statistics__single:nth-child(3) .statistics__img {
     top: 6px;
     left: 50%;
-}
-.statistics_number {
+  }
+  
+  .statistics__number {
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 0.1875rem;
-    margin-top: 19px;
-}
-.statistics_description {
+    margin-top: 13px;
+  }
+  
+  .statistics__description {
     color: var(--color-grey);
     margin-top: 19px;
-}
+  }
+  
+
+/* benefits section */
 .benefits {
     padding: 100px 0;
     background-color: var(--color-light-grey);
-}
-.benefits_container {
+  }
+  
+  .benefits__container {
     padding: 0 100px;
-}
-.benefits_single {
+  }
+  
+  .benefits__single {
     background-color: var(--color-white);
     border: 1px solid #E8E9ED;
     display: flex;
@@ -181,50 +204,219 @@ h2 {
     align-items: flex-end;
     margin-bottom: 37px;
     border-radius: 5px;
-}
-.benefits_text {
+  }
+  
+  .benefits__text {
+    box-sizing: content-box;
     max-width: 415px;
     margin: 90px 36px;
-}
-.benefits_text::after {
+  }
+  
+  .benefits__text::after {
     content: "";
     width: 332px;
     height: 4px;
     background-color: var(--accent-color);
     display: block;
     margin-top: 50px;
-}
-.benefits_description {
+  }
+  
+  .benefits__description {
     margin-top: 30px;
     line-height: 1.375rem;
-}
-.benefits_image {
+  }
+  
+  .benefits__image {
     position: relative;
-}
-.benefits_image img {
+  }
+  
+  .benefits__image img {
     position: relative;
     z-index: 2;
-}
-.benefits_single--notebook {
+  }
+  
+  .benefits__single--notebook {
     --accent-color: var(--color-redish);
-}
-.benefits_single--notebook .benefits_image {
+  }
+  
+  .benefits__single--notebook .benefits__image {
     margin-right: 117px;
     margin-bottom: 38px;
-}
-.benefits_single--notebook .benefits_image::before {
+  }
+  
+  .benefits__single--notebook .benefits__image::before {
     content: "";
     width: 180px;
     height: 180px;
-    background-color:  var(--accent-color);
+    background-color: var(--accent-color);
     display: block;
     border-radius: 40px;
     position: absolute;
     right: 0;
     top: -40px;
     transform: rotate(45deg);
-}
-.benefits_single--notebook .benefits_image img {
+  }
+  
+  .benefits__single--notebook .benefits__image img {
     width: 386px;
     height: auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  
+  .benefits__single--phone {
+    --accent-color: var(--color-primary);
+    flex-direction: row-reverse;
+    padding: 0 20px 0 70px;
+  }
+  
+  .benefits__single--phone .benefits__image::before {
+    content: "";
+    width: 320px;
+    height: 320px;
+    background-color: var(--accent-color);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: -20px;
+  }
+  
+  .benefits__single--phone .benefits__image img {
+    width: 426px;
+    height: auto;
+  }
+  
+  .benefits__single--phone .benefits__text {
+    margin: 70px 0;
+  }
+  
+  .benefits__double {
+    --accent-color: var(--color-green);
+    display: flex;
+  }
+  
+  .benefits__double > div {
+    margin-bottom: 0;
+  }
+  
+  .benefits__single--solo {
+    max-width: 620px;
+  }
+  
+  .benefits__single--solo .benefits__text {
+    max-width: none;
+    margin: 70px 35px;
+  }
+  
+  .benefits__single--image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    border: none;
+    margin-left: 60px;
+  }
+  
+  .benefits__single--image img {
+    width: 295px;
+    height: auto;
+    margin-top: 55px;
+  }
+  
+/* pricing */
+.pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pricing_boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;    
+}
+.pricing_box {
+    width: 370px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+}
+
+.pricing_details {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.pricing_type {
+    font-size: 1.25rem;
+    font-family: var(--font-open-sans);
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--accent-color);
+}
+.pricing_price {
+    font-size: 2.875rem;
+    font-family: var(--font-open-sans);
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--accent-color);
+}
+.pricing_limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+}
+.pricing_items {
+    text-align: center;
+}
+.pricing_item {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.pricing_item::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../assets/Checkmark-1.svg");
+}
+.pricing_item--not::before {
+    background-image: url("../assets/Close.svg");
+}
+.pricing_box .btn {
+    position: relative;
+    bottom: -25px;
+    font-size: 0.8125rem;
+    background-color: var(--accent-color);
+}
+.pricing_box--basic {
+    --accent-color: var(--color-redish);
+}
+.pricing_box--basic .pricing_price {
+    margin-bottom: 30px;
+}
+.pricing_box--professional {
+    --accent-color: var(--color-primary);
+    width: 400px;
+    margin: 0 40px;
+    box-shadow: 5px 1px 27px var(--color-primary-shadow);
+}
+.pricing_box--professional .pricing_type {
+    font-size: 1.3125rem;
+}
+.pricing_box--professional .pricing_item {
+    margin-bottom: 25px;
+}
+.pricing_box--premium {
+    --accent-color: var(--color-green);
 }
