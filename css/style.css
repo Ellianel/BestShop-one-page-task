@@ -20,6 +20,10 @@ body {
 a {
 	text-decoration: none;
 }
+h2 {
+  font-family: var(--font-raleway);
+  font-size: 2.25rem;
+}
 
 .container {
 	width: 1352px;
@@ -338,8 +342,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;    
-}
+    margin-top: 50px; 
+    border: 1px solid var(--accent-color);
+}   
 .pricing_box {
     width: 370px;
     border-radius: 18px;
@@ -358,8 +363,6 @@ a {
     font-size: 1.25rem;
     font-family: var(--font-open-sans);
     font-weight: 300;
-    margin-top: 25px;
-    color: var(--accent-color);
 }
 .pricing_price {
     font-size: 2.875rem;
@@ -399,12 +402,18 @@ a {
     font-size: 0.8125rem;
     background-color: var(--accent-color);
 }
+
+/* basic box */
+
 .pricing_box--basic {
     --accent-color: var(--color-redish);
 }
 .pricing_box--basic .pricing_price {
     margin-bottom: 30px;
 }
+
+/* professional box */
+
 .pricing_box--professional {
     --accent-color: var(--color-primary);
     width: 400px;
@@ -417,6 +426,9 @@ a {
 .pricing_box--professional .pricing_item {
     margin-bottom: 25px;
 }
+
+/* premium box */
+
 .pricing_box--premium {
     --accent-color: var(--color-green);
 }
@@ -526,4 +538,28 @@ a {
   padding: 20px 97px;
   align-self: flex-end;
   margin-top: 20px;
+}
+/*  footer */
+.footer {
+  box-shadow: 0 -5px 40px #00000029;
+  padding: 20px 0;
+}
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer_copy {
+  font-size: 0.6875rem;
+  line-height: 1.5rem;
+  color: var(--color-grey);
+  margin-top: 6px;
+}
+.footer_icons a:first-of-type {
+  margin-right: 25px;
 }
