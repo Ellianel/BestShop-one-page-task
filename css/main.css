@@ -468,6 +468,78 @@ h2 {
   }
 }
 
+.scroll-to-top {
+  position: relative;
+}
+
+.btnS-position {
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  z-index: 20;
+}
+
+.btnS-style {
+  background-color: magenta;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: movebtn 3s ease-in-out infinite;
+          animation: movebtn 3s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.icon-style:hover {
+  -webkit-animation: none;
+          animation: none;
+  background-color: #fff;
+  color: magenta;
+  border: 5px soild magenta;
+}
+
+@-webkit-keyframes movebtn {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes movebtn {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .btn {
   color: white;
   font-weight: bold;

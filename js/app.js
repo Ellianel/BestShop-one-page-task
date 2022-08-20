@@ -4,16 +4,16 @@ function Calculator(form, summary) {
       orders: 0.5,
       package: {
         basic: 5,
-        professional: 30,
+        professional: 25,
         premium: 50
       },
       accounting: 20,
       terminal: 5
     };
   
-    
-     //Inputs / Select / Checkbox
-     
+    /**
+     * Inputs / Select / Checkbox
+     */
     this.form = {
       products: form.querySelector("#products"),
       orders: form.querySelector("#orders"),
@@ -21,10 +21,10 @@ function Calculator(form, summary) {
       accounting: form.querySelector("#accounting"),
       terminal: form.querySelector("#terminal")
     };
-
-    
-      //Summary el
-     
+  
+    /**
+     * Summary elements
+     */
     this.summary = {
       list: summary.querySelector("ul"),
       items: summary.querySelector("ul").children,
@@ -147,3 +147,31 @@ function Calculator(form, summary) {
   
     new Calculator(form, summary);
   });
+
+  // scrolling btn
+
+
+
+  const scrollBtn = document.querySelector(".btnS");
+  const btnSVisibility = () => {
+    if(window.scrollY > 400) {
+        scrollBtn.style.visibility = "visible";
+    } else {
+        scrollBtn.style.visibility = "hidden";
+    }
+  };
+
+  document.addEventListener("scroll", () => {
+    btnSVisibility();
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+  });
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+};
